@@ -1,30 +1,31 @@
 #ifndef LISTE_HPP
 #define LISTE_HPP
-
-class Cercle;
-class Rectangle;
-class Forme;
+#include "Cercle.hpp"
+#include "Rectangle.hpp"
 
 class Liste
 {
 	public:
 
-	Cercle tabC[];
-	Rectangle tabR[];
-
+	static int compteur;
 	const int capacite;
+	
+	Cercle* tabC;
+	Rectangle* tabR;
+
 	int tailleC;
 	int tailleR;
 
-	static int compteur;
 
 
-	// Constructors
+	// Constructors/Destructors
 	Liste();
+	~Liste();
 
 
 	// Other
-	void ajouter(Forme)
+	void ajouter(Cercle&);
+	void ajouter(Rectangle&);
 	std::string toString();
 };
 

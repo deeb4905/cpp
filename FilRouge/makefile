@@ -1,4 +1,4 @@
-SRC=main.cpp Forme.cpp Rectangle.cpp Cercle.cpp Point.cpp
+SRC=main.cpp Forme.cpp Rectangle.cpp Cercle.cpp Point.cpp Liste.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=prog
 

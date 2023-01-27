@@ -1,10 +1,11 @@
 #ifndef FORME_HPP
 #define FORME_HPP
-
-class Point;
+#include "Point.hpp"
 
 class Forme
 {
+	protected:
+	
 	Point p;
 	int w;
 	int h;
@@ -12,8 +13,10 @@ class Forme
 
 	public:
 
+	Forme(int, int, int, int);
+
 	// Other
-	virtual std::string toString();
+	virtual std::string toString() = 0;
 };
 
 #endif

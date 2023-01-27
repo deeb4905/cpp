@@ -5,13 +5,9 @@ int Point::counter = 0;
 
 Point::Point(int vx, int vy):x(vx), y(vy)
 {
-    std::cout << "I am the constructor with parameters" << std::endl;
     counter++;
 }
-Point::Point():Point(0, 0)
-{
-    std::cout << "I am the constructor without parameters" << std::endl;
-}
+Point::Point():Point(0, 0){}
 
 
 

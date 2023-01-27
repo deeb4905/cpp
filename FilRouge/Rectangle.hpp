@@ -11,9 +11,11 @@ class Rectangle : public Forme
 
 	// Constructors
 	Rectangle(int, int, int, int);
+	Rectangle();
 
 	// Getters/Setters
 	int getOrdre();
+	void setOrdre(int);
 
 	// Other
 	std::string toString() override;
