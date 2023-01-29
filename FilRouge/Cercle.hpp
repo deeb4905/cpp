@@ -4,22 +4,16 @@
 
 class Cercle : public Forme
 {
-	int ordre;
-
-
 	public:
 
 	// Constructors
 	Cercle(int, int, int, int);
 	Cercle(int, int, int);
 	Cercle();
-
-	// Getters/Setters
-	int getOrdre();
-	void setOrdre(int);
+	Cercle(int, int);
 
 	// Other
-	std::string toString() override;
+	std::string toString() const override;
 };
 
 #endif

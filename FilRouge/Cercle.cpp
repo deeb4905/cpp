@@ -10,19 +10,11 @@ Cercle::Cercle(int cx, int cy, int r)
 
 Cercle::Cercle():Cercle(0, 0, 0, 0){}
 
-
-int Cercle::getOrdre()
-{
-	return ordre;
-}
-
-void Cercle::setOrdre(int o)
-{
-	ordre = o;
-}
+Cercle::Cercle(int vw, int vh)
+	:Forme(vw, vh){}
 
 
-std::string Cercle::toString()
+std::string Cercle::toString() const
 {
 	std::string s = "Cercle ";
 	return s;

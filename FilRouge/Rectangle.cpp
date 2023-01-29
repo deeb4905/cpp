@@ -5,22 +5,15 @@
 Rectangle::Rectangle(int vx, int vy, int vw, int vh)
 	:Forme(vx, vy, vw, vh){}
 
-Rectangle::Rectangle():Rectangle(0, 0, 0, 0){}
+Rectangle::Rectangle()
+	:Rectangle(0, 0, 0, 0){}
+
+Rectangle::Rectangle(int vw, int vh)
+	:Forme(vw, vh){}
 
 
-int Rectangle::getOrdre()
+std::string Rectangle::toString() const
 {
-	return ordre;
-}
-
-void Rectangle::setOrdre(int o)
-{
-	ordre = o;
-}
-
-
-std::string Rectangle::toString()
-{
-	std::string s = "Rectangle ";
+	std::string s = "Rectangle " + std::to_string(p.getX()) + " " + std::to_string(p.getY()) + " " + std::to_string(w) + " " + std::to_string(h);
 	return s;
 }

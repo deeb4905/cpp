@@ -4,21 +4,15 @@
 
 class Rectangle : public Forme
 {
-	int ordre;
-
-
 	public:
 
 	// Constructors
 	Rectangle(int, int, int, int);
 	Rectangle();
-
-	// Getters/Setters
-	int getOrdre();
-	void setOrdre(int);
+	Rectangle(int, int);
 
 	// Other
-	std::string toString() override;
+	std::string toString() const override;
 };
 
 #endif

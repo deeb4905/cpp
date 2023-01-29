@@ -15,8 +15,8 @@ class Point
     Point();
 
     // Getters/Setters
-    int getX();
-    int getY();
+    int getX() const;
+    int getY() const;
     static int getCounter();
     void setX(int);
     void setY(int);
@@ -27,5 +27,7 @@ class Point
 
     void display();
 };
+
+extern Point ORIGINE;
 
 #endif

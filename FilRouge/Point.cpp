@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Point.hpp"
 
+Point ORIGINE{0, 0};
+
 int Point::counter = 0;
 
 Point::Point(int vx, int vy):x(vx), y(vy)
@@ -11,12 +13,12 @@ Point::Point():Point(0, 0){}
 
 
 
-int Point::getX()
+int Point::getX() const
 {
     return x;
 }
 
-int Point::getY()
+int Point::getY() const
 {
     return y;
 }
