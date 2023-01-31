@@ -9,6 +9,8 @@ class Forme
 {
 	protected:
 	
+	static int compteur;
+	
 	Point p;
 	int w;
 	int h;

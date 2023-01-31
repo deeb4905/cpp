@@ -2,11 +2,19 @@
 #include <string>
 #include "Forme.hpp"
 
+int Forme::compteur = 0;
+
 Forme::Forme(int vx, int vy, int vw, int vh)
-	:p(Point(vx, vy)), w(vw), h(vh), ordre(0), couleur(COULEURS::BLEU){}
+	:p(Point(vx, vy)), w(vw), h(vh), ordre(compteur), couleur(COULEURS::BLEU)
+	{
+		compteur++;
+	}
 
 Forme::Forme(int vw, int vh)
-	:p(ORIGINE), w(vw), h(vh), ordre(0), couleur(COULEURS::BLEU){}
+	:p(ORIGINE), w(vw), h(vh), ordre(compteur), couleur(COULEURS::BLEU)
+	{
+		compteur++;
+	}
 
 Forme::Forme()
 	:Forme(10, 10){}
