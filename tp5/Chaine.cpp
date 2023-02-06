@@ -50,3 +50,18 @@ void Chaine::afficher(std::ostream& flux) const
 {
     flux << this->c_str();
 }
+
+Chaine& Chaine::operator=(const Chaine& c)
+{
+    if(&c != this)
+    {
+        capacite = c.getCapacite();
+        delete[] tab;
+        tab = new char[capacite+1];
+
+        strcpy(tab, c.c_str());
+        tab[strlen(c.c_str())] = '\0';
+    }
+
+    return *this;
+}

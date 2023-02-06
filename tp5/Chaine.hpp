@@ -22,6 +22,7 @@ class Chaine
 
     // Other
     void afficher(std::ostream& = std::cout) const;
+    Chaine& operator=(const Chaine&);
 };
 
 #endif
