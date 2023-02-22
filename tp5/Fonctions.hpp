@@ -5,6 +5,6 @@
 
 void afficherParValeur(Chaine);
 void afficherParReference(Chaine&);
-std::ostream& operator<<(std::ostream& o, const Chaine &c);
+std::stringstream& operator<<(std::stringstream& o, Chaine& c);
 
 #endif

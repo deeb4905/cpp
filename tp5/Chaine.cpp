@@ -46,7 +46,7 @@ char const * Chaine::c_str() const
 
 
 
-void Chaine::afficher(std::ostream& flux) const
+void Chaine::afficher(std::stringstream& flux) const
 {
     flux << this->c_str();
 }

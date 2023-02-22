@@ -21,7 +21,7 @@ class Chaine
     char const * c_str() const;
 
     // Other
-    void afficher(std::ostream& = std::cout) const;
+    void afficher(std::stringstream&) const;
     Chaine& operator=(const Chaine&);
 };
 

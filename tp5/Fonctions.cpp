@@ -14,7 +14,7 @@ void afficherParReference(Chaine& c)
     c.afficher();
 }
 
-std::ostream& operator<<(std::ostream &o, const Chaine &c)
+std::stringstream& operator<<(std::stringstream& o, Chaine& c)
 {
     c.afficher(o);
     return o;
