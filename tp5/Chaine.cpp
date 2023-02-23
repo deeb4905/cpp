@@ -2,6 +2,7 @@
 #include <cstring>
 #include <sstream>
 #include "Chaine.hpp"
+#include "null_pointer.hpp"
 
 Chaine::Chaine() : capacite(-1), tab(nullptr){}
 
@@ -46,9 +47,9 @@ char const * Chaine::c_str() const
 
 
 
-void Chaine::afficher(std::stringstream& flux) const
+void Chaine::afficher(std::ostream& flux) const
 {
-    flux << this->c_str();
+    flux << this->c_str() << std::endl;
 }
 
 Chaine& Chaine::operator=(const Chaine& c)
@@ -64,4 +65,26 @@ Chaine& Chaine::operator=(const Chaine& c)
     }
 
     return *this;
+}
+
+char& Chaine::operator[](int n)
+{
+    if(n<strlen(tab))
+    {
+        std::cout << "pas const" << std::endl;
+        return tab[n];
+    }
+    else
+    {
+        throw(new null_pointer);
+    }
+}
+
+char& Chaine::operator[](int n) const
+{
+    if(n<strlen(tab))
+    {
+        std::cout << "const" << std::endl;
+        return tab[n];
+    }
 }

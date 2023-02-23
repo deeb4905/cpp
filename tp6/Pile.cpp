@@ -86,7 +86,7 @@ void Pile::push(int e)
 
 int Pile::pop()
 {
-    try
+    /*try
     {
         taille--;
         return tab[taille];
@@ -95,7 +95,14 @@ int Pile::pop()
     {
         std::cerr << "Out of bonds" << std::endl;
         taille++;
-    }*
+    }*/
+
+    if(taille<1)
+    {
+        throw(ExceptionBornes());
+    }
+    taille--;
+    return tab[taille];
     
     return 0;
 }
