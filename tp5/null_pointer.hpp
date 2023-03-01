@@ -8,7 +8,7 @@ class null_pointer : public std::logic_error
     public:
     
     null_pointer();
-    const char* what() const noexcept override;
+    null_pointer(std::string);
 };
 
 #endif

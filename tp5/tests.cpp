@@ -14,5 +14,5 @@ TEST_CASE("exception sur pointeur null") {
   std::logic_error * pe = new null_pointer;  
   delete pe;
 
-  REQUIRE_THROWS_AS( s[1] == 0, null_pointer);
+  REQUIRE_THROWS_AS( s[1] == 0, null_pointer*);
 }

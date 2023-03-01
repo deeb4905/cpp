@@ -2,16 +2,28 @@
 #include <cstring>
 #include <sstream>
 #include "Fonctions.hpp"
+#include "Agregateur.hpp"
+#include "Agregateur.impl.hpp"
 
 int main(int, char**)
 {
-    int a = 1;
-    int b = 2;
-    double c = 3;
+    
+    Agregateur<char> a;
+    Agregateur<char> b;
+    std::cout << b.size() << std::endl;
 
-    std::cout << maximum(a, b);
-    //std::cout << maximum(a, c);
-    std::cout << maximum((double)a, c);
+    for(int i=0;i<10;i++)
+    {
+        a.push_back('a');
+        b.push_back('b');
+    }
+
+    std::cout << b.size() << std::endl;
+    Agregateur<char> c{a};
+
+    a.afficher();
+    (b.concat(c)).afficher();
+    std::cout << c.at(4) << std::endl;
 
     return 0;
 }

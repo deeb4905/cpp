@@ -4,7 +4,7 @@
 #include "Pile.hpp"
 
 template<typename T>
-Pile::Pile(int t):capacite(t), taille(0), tab(nullptr)
+Pile<T>::Pile(int t):capacite(t), taille(0), tab(nullptr)
 {
     try
     {
@@ -17,39 +17,45 @@ Pile::Pile(int t):capacite(t), taille(0), tab(nullptr)
     }
 }
 
-Pile::Pile():Pile(10){}
+template<typename T>
+Pile<T>::Pile():Pile(10){}
 
 template<typename T>
-Pile::Pile(const Pile& p):capacite(p.getCapacite()), taille(p.size()), tab(new T[capacite])
+Pile<T>::Pile(const Pile<T>& p):capacite(p.getCapacite()), taille(p.size()), tab(new T[capacite])
 {
     mempcpy(tab, p.getTab(), taille*sizeof(T));
 }
 
-Pile::~Pile()
+template<typename T>
+Pile<T>::~Pile()
 {
     delete[] tab;
 }
 
 
 
-int Pile::getCapacite() const
+template<typename T>
+int Pile<T>::getCapacite() const
 {
     return capacite;
 }
 
-int Pile::size() const
+template<typename T>
+int Pile<T>::size() const
 {
     return taille;
 }
 
-const int* Pile::getTab() const
+template<typename T>
+const T* Pile<T>::getTab() const
 {
     return tab;
 }
 
 
 
-Pile& Pile::operator=(const Pile& p)
+template<typename T>
+Pile<T>& Pile<T>::operator=(const Pile<T>& p)
 {
     if(&p != this)
     {
@@ -66,13 +72,14 @@ Pile& Pile::operator=(const Pile& p)
 
 
 
-bool Pile::empty() const
+template<typename T>
+bool Pile<T>::empty() const
 {
     return !taille;
 }
 
 template <typename T>
-void Pile::push(T e)
+void Pile<T>::push(const T& e)
 {
     try
     {
@@ -88,7 +95,7 @@ void Pile::push(T e)
 }
 
 template <typename T>
-const T& Pile::pop()
+const T& Pile<T>::pop()
 {
     try
     {
@@ -99,13 +106,13 @@ const T& Pile::pop()
     {
         std::cerr << "Out of bonds" << std::endl;
         taille++;
-    }*
+    }
     
     return 0;
 }
 
 template <typename T>
-const T& Pile::top() const
+const T& Pile<T>::top() const
 {
     try
     {

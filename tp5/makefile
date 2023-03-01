@@ -1,4 +1,4 @@
-SRC= code.cpp tests.cpp Fonctions.cpp Chaine.cpp
+SRC= code.cpp tests.cpp Fonctions.cpp Chaine.cpp null_pointer.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=prog
 

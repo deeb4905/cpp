@@ -87,4 +87,8 @@ char& Chaine::operator[](int n) const
         std::cout << "const" << std::endl;
         return tab[n];
     }
+        else
+    {
+        throw(new null_pointer);
+    }
 }

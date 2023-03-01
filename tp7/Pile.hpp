@@ -17,7 +17,7 @@ class Pile
 
     Pile(int);
     Pile();
-    Pile(const Pile&);
+    Pile(const Pile<T>&);
     ~Pile();
 
     // Getters/Setters
@@ -26,7 +26,7 @@ class Pile
     const T* getTab() const;
 
     // Other
-    Pile& operator=(const Pile&);
+    Pile<T>& operator=(const Pile<T>&);
     bool empty() const;
     void push(const T&);
     const T& pop();
