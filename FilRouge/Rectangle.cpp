@@ -17,3 +17,10 @@ std::string Rectangle::toString() const
 	std::string s = "Rectangle " + std::to_string(p.getX()) + " " + std::to_string(p.getY()) + " " + std::to_string(w) + " " + std::to_string(h);
 	return s;
 }
+
+Rectangle* Rectangle::clone() const
+{
+	Rectangle* newRec = new Rectangle{p.getX(), p.getY(), w, h};
+
+	return newRec;
+}

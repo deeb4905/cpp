@@ -8,6 +8,9 @@ class Agregateur
     int taille;
     T* tab;
 
+    template <typename U>
+    friend Agregateur<U> operator+(const Agregateur<U>&, const Agregateur<U>&);
+
 
     public:
 

@@ -13,6 +13,7 @@ class Rectangle : public Forme
 
 	// Other
 	std::string toString() const override;
+	Rectangle* clone() const override;
 };
 
 #endif

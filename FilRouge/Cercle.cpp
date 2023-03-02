@@ -19,3 +19,10 @@ std::string Cercle::toString() const
 	std::string s = "Cercle ";
 	return s;
 }
+
+Cercle* Cercle::clone() const
+{
+	Cercle* newCercle = new Cercle{p.getX(), p.getY(), w, h};
+
+	return newCercle;
+}

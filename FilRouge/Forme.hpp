@@ -30,6 +30,7 @@ class Forme
 	void setOrdre(int);
 	COULEURS getCouleur() const;
 	void setCouleur(COULEURS);
+	virtual Forme* clone() const = 0;
 
 	// Other
 	virtual std::string toString() const;

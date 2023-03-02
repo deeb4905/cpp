@@ -7,8 +7,13 @@ int main(int, char**)
 {
     // Fil rouge
     Rectangle r{1, 2};
+    Cercle c{10, 11, 12, 13};
 
-    std::cout << r.toString() << std::endl;
+    Rectangle r2 = *(r.clone());
+    Cercle c2 = *(c.clone());
+
+    std::cout << r2.toString() << std::endl;
+    std::cout << c2.toString() << std::endl;
 
     return 0;
 }

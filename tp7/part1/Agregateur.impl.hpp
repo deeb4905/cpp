@@ -1,7 +1,20 @@
+#ifndef AGREGATEUR_IMPL_HPP
+#define AGREGATEUR_IMPL_HPP
+
 #include <iostream>
 #include <cstring>
 #include <sstream>
 #include "Agregateur.hpp"
+
+template <typename T>
+friend Agregateur<T> operator+(const Agregateur<T>& a, const Agregateur<T>& b)
+{
+    Agregateur<T> newAgreg{a};
+
+    return a.concat(b);
+}
+
+
 
 template <typename T>
 Agregateur<T>::Agregateur()
@@ -109,3 +122,5 @@ void Agregateur<T>::afficher() const
         std::cout << tab[i] << std::endl;
     }
 }
+
+#endif

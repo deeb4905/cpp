@@ -14,6 +14,7 @@ class Cercle : public Forme
 
 	// Other
 	std::string toString() const override;
+	Cercle* clone() const override;
 };
 
 #endif
