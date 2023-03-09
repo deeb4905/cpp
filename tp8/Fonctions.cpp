@@ -4,13 +4,13 @@
 #include "Fonctions.hpp"
 #include "ZZ.hpp"
 
-std::ostream& operator<<(std::ostream& o, const ZZ& z)
+std::ostream& operator<<(std::ostream& o, const ZZ*& z)
 {
-    o << z.getName() << " " << z.getNote() << std::endl;
+    o << z->getName() << " " << z->getNote() << std::endl;
     return o;
 }
 
-bool operator<(const ZZ& y, const ZZ& z)
+bool operator<(const ZZ*& y, const ZZ*& z)
 {
-    return y.getNote() < z.getNote();
+    return y->getNote() < z->getNote();
 }

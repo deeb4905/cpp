@@ -12,14 +12,20 @@ List<T>::List():head(nullptr), tail(nullptr){}
 template <typename T>
 List<T>::~List()
 {
-    delete head;
-    delete tail;
+    Cell<T>* curr = head;
+    Cell<T>* prec = head;
+    while(curr != nullptr)
+    {
+        curr = curr->next;
+        delete prec;
+        prec = curr;
+    }
 }
 
 template <typename T>
 Cell<T>::~Cell()
 {
-    delete next;
+    //delete next;
 }
 
 template <typename T>
@@ -45,18 +51,14 @@ int List<T>::size() const
 template <typename T>
 void List<T>::push_back(const T& d)
 {
-    std::cout << "ui";
     Cell<T>* newCell = new Cell<T>{d};
-    std::cout << "oi";
 
     if(tail == nullptr)
     {
-        std::cout << "oui";
         head = newCell;
     }
     else
     {
-        std::cout << "no";
         tail->next = newCell;
     }
     tail = newCell;
@@ -105,8 +107,13 @@ T& List<T>::pop_front()
     {
         throw(ExceptionOutOfBounds());
     }
+    if(head == tail)
+    {
+        tail = nullptr;
+    }
 
     Cell<T>* tbr = head;
+    delete head;
     head = head->next;
 
     return tbr->data;
@@ -132,10 +139,10 @@ T& List<T>::pop_back()
         Cell<T>* curr = head;
         while(curr->next->next != nullptr)
         {
-            std::cout << "dddaaa";
             curr = curr->next;
         }
         tbr = curr->next;
+        delete tail;
         tail = curr;
         tail->next = nullptr;
     }
@@ -147,12 +154,12 @@ template <typename T>
 void List<T>::display() const
 {
     Cell<T>* curr = head;
-    //std::cout << (curr == nullptr) << std::endl;
     while(curr != nullptr)
     {
         std::cout << curr->data << " ";
         curr = curr->next;
     }
+    std::cout << std::endl;
 }
 
 #endif

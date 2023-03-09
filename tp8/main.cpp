@@ -3,36 +3,54 @@
 #include <iostream>
 #include <iterator>
 #include <queue>
+#include <map>
+#include <utility>
 #include "ZZ.hpp"
-#include "Fonctions.hpp"
+//#include "Fonctions.hpp"
 
-int main (int, char **)
+const std::string& first(const std::pair<std::string,std::string>& p) { return p.first; }
+//const std::string& paire(const std::pair<std::string,std::string>& p) { return p.first + p.second; }
+const std::pair<std::string,std::string> self(const std::pair<std::string,std::string>& p) { return p; }
+int self2(int const& i){return i;}
+
+int main(int argc, char** argv)
 {
-    typedef std::vector<ZZ>  vzz;
-    // OU en C++ 2011
-    // using vzz = std::vector<ZZ> ;
-
-    vzz zz;
-
-    // il faut mettre des elements
-    // zz.push_back(ZZ(...));
-    ZZ z1{"Manuel", "Valls", 2};
-    ZZ z2{"Na", "gui", 13};
-    ZZ z3{"Eric", "et Ramzy", 10};
-
-    zz.push_back(z1);
-    zz.push_back(z2);
-    zz.push_back(z3);
-
-    std::priority_queue<ZZ> tri;
-
-    for(vzz::iterator it = zz.begin(); 
-        it!=zz.end(); ++it)
-    tri.push(*it);
-
-    while(!tri.empty()) {
-    std::cout << tri.top() << " ";
-    tri.pop();
+    if(argc == 1)
+    {
+        //
     }
+    else
+    {
+        //
+    }
+    std::map<std::string, std::string> liste;
+    std::map<std::string, std::string> liste2;
+    std::vector<int> liste3;
+    std::vector<int> liste4;
+
+
+    liste["un"] = "deux";
+    liste["trois"] = "quatre";
+    liste3.push_back(1);
+    liste3.push_back(2);
+    liste3.push_back(13);
+
+    std::map<std::string, std::string>::const_iterator it = liste.begin();
+
+    while(it!=liste.end())
+    {  
+        std::cout << it->first  << " " << it->second << std::endl;
+        ++it;
+    }
+
+    transform(liste.begin(), liste.end(), 
+    std::ostream_iterator<std::string>(std::cout, " "), first);
+
+    liste2.resize(liste.size());
+
+    transform(liste.begin(), liste.end(), liste2.begin(), self);
+
+
+    
     return 0;
 }

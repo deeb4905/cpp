@@ -1,4 +1,4 @@
-SRC= main.cpp ZZ.cpp Fonctions.cpp
+SRC= main.cpp ZZ.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=prog
 
