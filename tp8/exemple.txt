@@ -1,0 +1,4 @@
+fruit pomme
+legume carotte
+couleur vert
+pays Canada

@@ -5,43 +5,35 @@
 #include <queue>
 #include <map>
 #include <utility>
+#include <fstream>
 #include "ZZ.hpp"
-//#include "Fonctions.hpp"
+#include "Fonctions.hpp"
 
-const std::string& first(const std::pair<std::string,std::string>& p) { return p.first; }
-//const std::string& paire(const std::pair<std::string,std::string>& p) { return p.first + p.second; }
-const std::pair<std::string,std::string> self(const std::pair<std::string,std::string>& p) { return p; }
 int self2(int const& i){return i;}
 
-int main(int argc, char** argv)
+int main(int, char**)
 {
-    if(argc == 1)
+    typedef std::vector<ZZ> vzz;
+    // OU en C++ 2011
+    // using vzz = std::vector<ZZ> ;
+
+    vzz zz;
+    zz.push_back(ZZ("Peppa", "Pig", 12));
+    zz.push_back(ZZ("L'âne", "Trotro", 10.5));
+    zz.push_back(ZZ("Franklin", "La tortue", 16));
+    zz.push_back(ZZ("Mowgli", "Le petit humain", 4));
+
+    std::priority_queue<ZZ> triNom;
+
+    for(vzz::iterator it = zz.begin(); it!=zz.end(); ++it)
+    triNom.push(*it);
+
+    while(!triNom.empty())
     {
-        //
-    }
-    else
-    {
-        //
-    }
-    std::map<std::string, std::string> liste;
-    std::map<std::string, std::string> liste2;
-
-    liste["un"] = "deux";
-    liste["trois"] = "quatre";
-
-    /*std::map<std::string, std::string>::const_iterator it = liste.begin();
-
-    while(it!=liste.end())
-    {  
-        std::cout << it->first  << " " << it->second << std::endl;
-        ++it;
+        std::cout << triNom.top() << " ";
+        triNom.pop();
     }
 
-    transform(liste.begin(), liste.end(), 
-    std::ostream_iterator<std::string>(std::cout, " "), first);*/
-
-    //liste2.resize(liste.size());
-    copy(liste.begin(), liste.end(), liste2.begin());
 
 
     

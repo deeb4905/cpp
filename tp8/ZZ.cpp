@@ -7,7 +7,7 @@ ZZ::ZZ(std::string n, std::string p, int m):nom(n), prenom(p), note(m){}
 
 std::string ZZ::getName() const
 {
-    return nom + " " + prenom;
+    return nom + prenom;
 }
 
 int ZZ::getNote() const
