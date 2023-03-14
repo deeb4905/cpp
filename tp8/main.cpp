@@ -25,17 +25,11 @@ int main(int argc, char** argv)
     }
     std::map<std::string, std::string> liste;
     std::map<std::string, std::string> liste2;
-    std::vector<int> liste3;
-    std::vector<int> liste4;
-
 
     liste["un"] = "deux";
     liste["trois"] = "quatre";
-    liste3.push_back(1);
-    liste3.push_back(2);
-    liste3.push_back(13);
 
-    std::map<std::string, std::string>::const_iterator it = liste.begin();
+    /*std::map<std::string, std::string>::const_iterator it = liste.begin();
 
     while(it!=liste.end())
     {  
@@ -44,11 +38,10 @@ int main(int argc, char** argv)
     }
 
     transform(liste.begin(), liste.end(), 
-    std::ostream_iterator<std::string>(std::cout, " "), first);
+    std::ostream_iterator<std::string>(std::cout, " "), first);*/
 
-    liste2.resize(liste.size());
-
-    transform(liste.begin(), liste.end(), liste2.begin(), self);
+    //liste2.resize(liste.size());
+    copy(liste.begin(), liste.end(), liste2.begin());
 
 
     
