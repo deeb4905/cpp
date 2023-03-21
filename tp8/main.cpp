@@ -8,6 +8,7 @@
 #include <fstream>
 #include "ZZ.hpp"
 #include "Fonctions.hpp"
+#include "Inferieur.hpp"
 
 int self2(int const& i){return i;}
 
@@ -24,14 +25,24 @@ int main(int, char**)
     zz.push_back(ZZ("Mowgli", "Le petit humain", 4));
 
     std::priority_queue<ZZ> triNom;
+    std::priority_queue<ZZ, std::vector<ZZ>, Inferieur> triNote;
 
     for(vzz::iterator it = zz.begin(); it!=zz.end(); ++it)
-    triNom.push(*it);
+    {
+        triNom.push(*it);
+        triNote.push(*it);
+    }
+
 
     while(!triNom.empty())
     {
         std::cout << triNom.top() << " ";
         triNom.pop();
+    }
+    while(!triNote.empty())
+    {
+        std::cout << triNote.top() << " ";
+        triNote.pop();
     }
 
 

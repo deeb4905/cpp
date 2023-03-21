@@ -1,4 +1,4 @@
-SRC= main.cpp ZZ.cpp Fonctions.cpp Inferieur.cpp
+SRC= main.cpp Rand_0_100.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=prog
 
