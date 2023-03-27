@@ -5,16 +5,16 @@
 
 
 TEST_CASE("telephone1a") {
-/* Telephone iphone;
+ Telephone iphone;
  const char * isima = "0473405000";
 
  CHECK( "" == iphone.getNumero());
  iphone.setNumero(isima);
- CHECK( isima == iphone.getNumero()); */
+ CHECK( isima == iphone.getNumero()); 
 }
 
 
-/*
+
 TEST_CASE("telephone1b") {
  std::string loic = "0473405042";
  Telephone   iphone(loic);
@@ -65,11 +65,12 @@ TEST_CASE("Reseau3") {
  CHECK(&r           == r.trouveTel("0473405042").getReseau());
 }
 
+/*
 TEST_CASE("Reseau4") {
  MON_RESEAU;
 
  CHECK_THROWS_AS("0473405070" == r.trouveTel("0473405070").getNumero(), std::invalid_argument);
-}
+}*/
 
 TEST_CASE("Reseau5") {
   MauvaisNumero e;
@@ -88,21 +89,21 @@ TEST_CASE("Telephone3") {
 
  CHECK( 0 == t.getReseau());
 }
-
+/*
 TEST_CASE("SMS1") {
 	SMS sms("0473405044", "0473405042", "20171207");
 	sms.setTexte("Examen en cours");
 	CHECK("Examen en cours" == sms.getTexte());
 	CHECK("Examen en cours" == sms.afficher());
-} */
+} 
 
-/*
+
 TEST_CASE("Message0") {
    Message m;
    // si ca compile, c'est perdu ...
 } */
 
-/*
+
 TEST_CASE("Message1") {
  int nb = Message::getCle();
  Message * sms1 = new SMS("", "", "");
@@ -215,4 +216,4 @@ TEST_CASE("MMS3") {
   CHECK(1 == de->getNbMessages());
   CHECK(1 ==  a->getNbMessages());
 
-} */
+}

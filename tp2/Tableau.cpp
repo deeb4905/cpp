@@ -15,7 +15,7 @@ class Tableau
        }
    }
 
-   ~Tableau():
+   ~Tableau()
    {
         delete[] tab;
    }
