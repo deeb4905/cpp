@@ -72,7 +72,7 @@ TEST_CASE ( "TP1_Cartesien::Constructeur" ) {
  REQUIRE ( c.getY() == Approx(y) );
 }
 
-//------------------------------------------------------------------------------------------------ 7
+//7------------------------------------------------------------------------------------------------ 7
 TEST_CASE ( "TP1_Cartesien::ConstructeurDefaut" ) {
  Cartesien c;
 
@@ -94,7 +94,7 @@ TEST_CASE ( "TP1_Cartesien::Accesseurs" ) {
  REQUIRE ( c.getY() == Approx(y) );
 }
 
-//------------------------------------------------------------------------------------------------ 9
+//9------------------------------------------------------------------------------------------------ 9
 TEST_CASE ( "TP1_Cartesien::AccesseursConstants" ) {
  const Cartesien c;
 
@@ -148,8 +148,8 @@ TEST_CASE ( "TP1_Point::OperateurFlux" ) {
  REQUIRE ( flux2.str() == "(x=13;y=25)" );
 }
 
-//----------------------------------------------------------------------------------------------- 13
-/*TEST_CASE ( "TP1_Point::ConversionVersPolaire_V1" ) {
+//13----------------------------------------------------------------------------------------------- 13
+TEST_CASE ( "TP1_Point::ConversionVersPolaire_V1" ) {
  const double x = 12.0;
  const double y = 24.0;
  const double a = 63.434948;
@@ -162,10 +162,10 @@ TEST_CASE ( "TP1_Point::OperateurFlux" ) {
 
  REQUIRE ( p.getAngle() == Approx(a).epsilon(1e-3) );
  REQUIRE ( p.getDistance() == Approx(d).epsilon(1e-3) );
-}*/
+}
 
-//----------------------------------------------------------------------------------------------- 14
-/*TEST_CASE ( "TP1_Point::ConversionVersCartesien_V1" ) {
+//14----------------------------------------------------------------------------------------------- 14
+TEST_CASE ( "TP1_Point::ConversionVersCartesien_V1" ) {
  const double a = 12.0;
  const double d = 24.0;
  const double x = 23.475542;
@@ -178,10 +178,10 @@ TEST_CASE ( "TP1_Point::OperateurFlux" ) {
 
  REQUIRE ( c.getX() == Approx(x).epsilon(1e-3) );
  REQUIRE ( c.getY() == Approx(y).epsilon(1e-3) );
-}*/
+}
 
-//----------------------------------------------------------------------------------------------- 15
-/*TEST_CASE ( "TP1_Point::ConversionVirtuel" ) {
+//15----------------------------------------------------------------------------------------------- 15
+TEST_CASE ( "TP1_Point::ConversionVirtuel" ) {
  const double x = 12.0;
  const double y = 24.0;
  const double a = 63.434948;
@@ -212,10 +212,10 @@ TEST_CASE ( "TP1_Point::OperateurFlux" ) {
  REQUIRE ( p1.getDistance() == Approx(d).epsilon(1e-3) );
  REQUIRE ( p2.getAngle() == Approx(a).epsilon(1e-3) );
  REQUIRE ( p2.getDistance() == Approx(d).epsilon(1e-3) );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 16
-/*TEST_CASE ( "TP1_Point::ConversionVersPolaire_V2" ) {
+TEST_CASE ( "TP1_Point::ConversionVersPolaire_V2" ) {
  const double x = 12.0;
  const double y = 24.0;
  const double a = 63.434948;
@@ -226,10 +226,10 @@ TEST_CASE ( "TP1_Point::OperateurFlux" ) {
 
  REQUIRE ( p.getAngle() == Approx(a).epsilon(1e-3) );
  REQUIRE ( p.getDistance() == Approx(d).epsilon(1e-3) );
-}*/
+}
 
-//----------------------------------------------------------------------------------------------- 17
-/*TEST_CASE ( "TP1_Point::ConversionVersCartesien_V2" ) {
+//17----------------------------------------------------------------------------------------------- 17
+TEST_CASE ( "TP1_Point::ConversionVersCartesien_V2" ) {
  const double a = 12.0;
  const double d = 24.0;
  const double x = 23.475542;
@@ -240,7 +240,7 @@ TEST_CASE ( "TP1_Point::OperateurFlux" ) {
 
  REQUIRE ( c.getX() == Approx(x).epsilon(1e-3) );
  REQUIRE ( c.getY() == Approx(y).epsilon(1e-3) );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 18
 /*TEST_CASE ( "TP1_Nuage::Ajout" ) {

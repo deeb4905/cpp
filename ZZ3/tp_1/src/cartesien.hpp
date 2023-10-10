@@ -2,9 +2,12 @@
 #define CARTESIEN_HPP
 
 #include <sstream>
-#include "point.hpp"
+#include <math.h>
 
-using namespace std;
+#include "point.hpp"
+#include "polaire.hpp"
+
+class Polaire;
 
 class Cartesien : public Point
 {
@@ -14,6 +17,7 @@ class Cartesien : public Point
     public:
     Cartesien();
     Cartesien(double, double);
+    Cartesien(Polaire&);
 
     // Getters/Setters
     double getX() const;
@@ -21,7 +25,11 @@ class Cartesien : public Point
     void setX(double);
     void setY(double);
 
-    void afficher(stringstream&) const;
+    // Other
+    void convertir(Polaire&) const;
+    void convertir(Cartesien&) const;
+
+    void afficher(std::stringstream&) const;
 };
 
 #endif

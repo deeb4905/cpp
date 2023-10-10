@@ -2,6 +2,8 @@
 
 Cartesien::Cartesien(double x, double y):x(x), y(y){}
 Cartesien::Cartesien():Cartesien(0, 0){}
+Cartesien::Cartesien(Polaire& p):Cartesien(p.getDistance() * cos(p.getAngle() * M_PI / 180),
+                                            p.getDistance() * sin(p.getAngle() * M_PI / 180)){}
 
 double Cartesien::getX() const
 {
@@ -25,9 +27,22 @@ void Cartesien::setY(double v)
 
 
 
+void Cartesien::convertir(Cartesien& c) const
+{
+    c.setX(x);
+    c.setY(y);
+}
+void Cartesien::convertir(Polaire& p) const
+{
+    p.setAngle(atan2(y, x) * 180 / M_PI);
+    p.setDistance(hypot(x, y));
+}
 
 
-void Cartesien::afficher(stringstream& flux) const
+
+
+
+void Cartesien::afficher(std::stringstream& flux) const
 {
     flux << "(x=" << this->getX() << ";y=" << this->getY() << ")";
 }

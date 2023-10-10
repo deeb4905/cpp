@@ -7,7 +7,7 @@ find_package ( Threads )
 
 # C++ Warning Level #-------------------------------------------------------------------------------
 if ( CMAKE_COMPILER_IS_GNUCXX )
- set ( CMAKE_CXX_FLAGS "-Wall -pedantic -Wfatal-errors ${CMAKE_CXX_FLAGS}" )
+ set ( CMAKE_CXX_FLAGS "-Wall -pedantic ${CMAKE_CXX_FLAGS}" )
 endif ()
 
 # C++14 #-------------------------------------------------------------------------------------------
