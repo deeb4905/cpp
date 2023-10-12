@@ -42,7 +42,7 @@ void Cartesien::convertir(Polaire& p) const
 
 
 
-void Cartesien::afficher(std::stringstream& flux) const
+void Cartesien::afficher(std::ostream& flux) const
 {
-    flux << "(x=" << this->getX() << ";y=" << this->getY() << ")";
+    flux << "(x=" << this->getX() << ";y=" << this->getY() << ")" << std::endl;
 }

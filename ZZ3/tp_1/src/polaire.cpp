@@ -42,7 +42,7 @@ void Polaire::convertir(Cartesien& c) const
 
 
 
-void Polaire::afficher(std::stringstream& flux) const
+void Polaire::afficher(std::ostream& flux) const
 {
-    flux << "(a=" << this->getAngle() << ";d=" << this->getDistance() << ")";
+    flux << "(a=" << this->getAngle() << ";d=" << this->getDistance() << ")" << std::endl;
 }

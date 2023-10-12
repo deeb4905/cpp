@@ -29,7 +29,7 @@ class Cartesien : public Point
     void convertir(Polaire&) const;
     void convertir(Cartesien&) const;
 
-    void afficher(std::stringstream&) const;
+    void afficher(std::ostream&) const;
 };
 
 #endif

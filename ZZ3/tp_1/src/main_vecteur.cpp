@@ -30,6 +30,36 @@ int main() {
     {
         elem.afficher(std::cout);
     }
+    std::cout << "----------------\n\n" << std::endl;
+
+
+
+
+
+    /*std::vector<Point> v3;
+    v3.emplace_back(c1);
+    v3.emplace_back(c2);
+    v3.emplace_back(p1);
+    v3.emplace_back(p2);
+
+    for(Point& elem : v3)
+    {
+        elem.afficher(std::cout);
+    }
+    std::cout << "----------------\n\n" << std::endl;*/
+
+
+
+    std::vector<Point*> v4;
+    v4.emplace_back(&c1);
+    v4.emplace_back(&c2);
+    v4.emplace_back(&p1);
+    v4.emplace_back(&p2);
+
+    for(Point* elem : v4)
+    {
+        elem->afficher(std::cout);
+    }
 
     return EXIT_SUCCESS;
 }

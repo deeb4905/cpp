@@ -2,7 +2,7 @@
 
 // Surcharges externes
 
-std::stringstream& operator<<(std::stringstream& f, const Point& p)
+std::ostream& operator<<(std::ostream& f, const Point& p)
 {
     p.afficher(f);
     return f;
