@@ -1,6 +1,8 @@
 #include "nuage.hpp"
 #include "cartesien.hpp"
 #include "point.hpp"
+#include <cstdlib>
+
 
 Nuage::Nuage():s(0){}
 
@@ -9,26 +11,57 @@ int Nuage::size() const
     return s;
 }
 
-void Nuage::ajouter(Point* p)
+const std::vector<Point*> Nuage::getList() const
 {
-    list.emplace_back(p);
+    return list;
+}
+
+
+
+void Nuage::ajouter(Point& p)
+{
+    list.emplace_back(&p);
     s++;
 }
 
-double Nuage::barycentre() const
+Nuage::const_iterator Nuage::begin()
 {
+    Nuage::const_iterator it = list.begin();
+    return it;
+}
+
+Nuage::const_iterator Nuage::end()
+{
+    Nuage::const_iterator it = list.end();
+    return it;
+}
+
+
+
+
+
+
+
+
+
+
+Cartesien barycentre(Nuage n)
+{
+    Cartesien c;
     double baryX = 0;
     double baryY = 0;
-    Cartesien c;
-
-    for(Point* p : list)
+    
+    for(Point* p : n.getList())
     {
         p->convertir(c);
         baryX += c.getX();
         baryY += c.getY();
     }
 
-    return ;
+    c.setX(baryX/n.size());
+    c.setY(baryY/n.size());
+
+    return c;
 }
 
 
