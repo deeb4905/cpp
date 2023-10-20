@@ -68,24 +68,48 @@ class Nuage
 template<typename T>
 T barycentre_v1(Nuage<T>& n)
 {
-    Cartesien c;
-    T bary;
+    //Version test 4a
+    /*Cartesien c(0, 0);
     double baryX = 0;
     double baryY = 0;
-    
-    for(T p : n.getList())
+    if(n.size()!=0)
     {
-        p.convertir(c);
-        baryX += c.getX();
-        baryY += c.getY();
+        T bary;
+        for(T p : n.getList())
+        {
+            p.convertir(c);
+            baryX += c.getX();
+            baryY += c.getY();
+        }
+
+        c.setX(baryX/n.size());
+        c.setY(baryY/n.size());
+
+        c.convertir(bary);
     }
+    return c;*/
 
-    c.setX(baryX/n.size());
-    c.setY(baryY/n.size());
+    //Version test 4b
+    Polaire pol(0, 0);
+    double baryA = 0;
+    double baryD = 0;
+    if(n.size()!=0)
+    {
+        T bary;
+        for(T p : n.getList())
+        {
+            p.convertir(pol);
+            baryA += pol.getAngle();
+            baryD += pol.getDistance();
+        }
 
-    c.convertir(bary);
+        pol.setAngle(baryA/n.size());
+        pol.setDistance(baryD/n.size());
 
-    return c;
+        pol.convertir(bary);
+    }
+    
+    return pol;
 }
 
 
