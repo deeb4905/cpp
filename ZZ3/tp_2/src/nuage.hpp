@@ -65,52 +65,32 @@ class Nuage
 }
 };
 
-template<typename T>
-T barycentre_v1(Nuage<T>& n)
+//template<template<typename T>class Container>
+template<typename Container, typename T>
+//T barycentre_v2(Container<T>& n)
+T barycentre_v2(Container& n)
 {
-    //Version test 4a
-    /*Cartesien c(0, 0);
-    double baryX = 0;
-    double baryY = 0;
+    T bary;
+    Cartesien c(0, 0);
     if(n.size()!=0)
     {
-        T bary;
-        for(T p : n.getList())
+        double baryA = 0;
+        double baryD = 0;
+        for (n::const_iterator it = n.begin() ; it != n.end(); ++it)
         {
-            p.convertir(c);
+            (*it).convertir(c);
             baryX += c.getX();
             baryY += c.getY();
         }
-
         c.setX(baryX/n.size());
         c.setY(baryY/n.size());
-
-        c.convertir(bary);
     }
-    return c;*/
 
-    //Version test 4b
-    Polaire pol(0, 0);
-    double baryA = 0;
-    double baryD = 0;
-    if(n.size()!=0)
-    {
-        T bary;
-        for(T p : n.getList())
-        {
-            p.convertir(pol);
-            baryA += pol.getAngle();
-            baryD += pol.getDistance();
-        }
-
-        pol.setAngle(baryA/n.size());
-        pol.setDistance(baryD/n.size());
-
-        pol.convertir(bary);
-    }
-    
-    return pol;
+    c.convertir(bary);
+    return bary;
 }
+
+
 
 
 /*
