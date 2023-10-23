@@ -5,6 +5,7 @@
 #include <vector>
 #include <sstream>
 #include <math.h>
+#include <iterator>
 
 #include "cartesien.hpp"
 #include "polaire.hpp"
@@ -21,6 +22,7 @@ class Nuage
     public:
 
     using const_iterator = typename std::vector<T>::iterator;
+    using value_type = typename std::vector<T>::value_type;
 
     Nuage(){}
 
@@ -65,18 +67,17 @@ class Nuage
 }
 };
 
-//template<template<typename T>class Container>
-template<typename Container, typename T>
-//T barycentre_v2(Container<T>& n)
-T barycentre_v2(Container& n)
+template<template <typename> class Container, typename T>
+T barycentre_v2(Container<T>& n)
 {
+    
     T bary;
     Cartesien c(0, 0);
     if(n.size()!=0)
     {
-        double baryA = 0;
-        double baryD = 0;
-        for (n::const_iterator it = n.begin() ; it != n.end(); ++it)
+        double baryX = 0;
+        double baryY = 0;
+        for (auto it = n.begin() ; it != n.end(); ++it)
         {
             (*it).convertir(c);
             baryX += c.getX();
@@ -89,7 +90,6 @@ T barycentre_v2(Container& n)
     c.convertir(bary);
     return bary;
 }
-
 
 
 

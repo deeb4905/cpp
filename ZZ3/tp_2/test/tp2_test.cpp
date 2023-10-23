@@ -6,7 +6,7 @@
 #include <nuage.hpp>
 
 // Tests //-----------------------------------------------------------------------------------------
-
+/*
 //------------------------------------------------------------------------------------------------ 1
 TEST_CASE ( "TP2_Nuage::Ajout" ) {
  Nuage<Cartesien> n;
@@ -114,7 +114,7 @@ TEST_CASE ( "TP2_Nuage::BarycentrePolaire_V1" ) {
 }
 
 //----------------------------------------------------------------------------------------------- 4b
-/*TEST_CASE ( "TP2_Nuage::BarycentrePolaire_V1" ) {
+TEST_CASE ( "TP2_Nuage::BarycentrePolaire_V1" ) {
  Nuage<Polaire> n;
 
  Polaire p1(12,34);
