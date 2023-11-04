@@ -1038,6 +1038,7 @@ CMakeFiles/tp2_test.dir/test/tp2_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
   /usr/include/c++/11/bits/stl_tempbuf.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stream_iterator.h \
   /usr/include/c++/11/bits/streambuf.tcc \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/c++/11/bits/string_view.tcc \
@@ -1076,6 +1077,7 @@ CMakeFiles/tp2_test.dir/test/tp2_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
   /usr/include/c++/11/ios \
   /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/istream \
+  /usr/include/c++/11/iterator \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/memory \
