@@ -4,13 +4,12 @@
 #include <sstream>
 #include "exception.hpp"
 
+
 std::string chaine(std::string);
 std::string chaine(int);
 std::string chaine(double);
-template <typename... Args>
-std::string chaine(Args&...);
-template <typename... Args>
-std::string chaine(std::tuple<Args...>);
+template <typename... Args> std::string chaine(Args&...);
+template <typename... Args> std::string chaine(std::tuple<Args...>);
 
 
 
@@ -41,13 +40,6 @@ std::string chaine(double v)
 }
 
 
-/*
-template <typename... Args>
-std::string chaine(Args&... args)
-{    
-    return ((" " + chaine(args)) + ...);
-
-}*/
 
 template <typename Arg, typename... Args>
 std::string chaine(Arg arg1, Args&... args)
@@ -71,8 +63,99 @@ std::string chaine(std::tuple<Args...> t)
 
 // https://en.cppreference.com/w/cpp/utility/integer_sequence
 // Difference index_sequence, make_index_sequence, index_sequence_for
-// Pourquoi on prend une sequence pour se servir que de Is
 
-// Pourquoi 
+
+
+
+
+
+template <int N>
+struct Puissance
+{
+    static double valeur(double n)
+    {
+        return Puissance<N-1>::valeur(n)*n;
+    }
+};
+template <>
+struct Puissance<0>
+{
+    static double valeur(double)
+    {
+        return 1;
+    }
+};
+
+
+
+template <int N>
+struct Factorielle
+{
+    static const unsigned long valeur = N*Factorielle<N-1>::valeur;
+};
+template <>
+struct Factorielle<0>
+{
+    static const unsigned long valeur = 1;
+};
+
+
+
+template <int N>
+struct Exponentielle
+{
+    static double valeur(double d)
+    {
+        return Exponentielle<N-1>::valeur(d) + Puissance<N>::valeur(d) / Factorielle<N>::valeur;
+    }
+};
+template <>
+struct Exponentielle<0>
+{
+    static double valeur(double)
+    {
+        return 1;
+    }
+};
+
+
+
+template <int N>
+struct Cosinus
+{
+    static double valeur(double d)
+    {
+        return Cosinus<N-1>::valeur(d) + Puissance<N>::valeur(-1) * Puissance<2*N>::valeur(d) / Factorielle<2*N>::valeur;
+    }
+};
+template <>
+struct Cosinus<0>
+{
+    static double valeur(double)
+    {
+        return 1;
+    }
+};
+
+
+template <int N>
+struct Sinus
+{
+    static double valeur(double d)
+    {
+        return Sinus<N-1>::valeur(d) + Puissance<N>::valeur(-1) * Puissance<2*N+1>::valeur(d) / Factorielle<2*N+1>::valeur;
+    }
+};
+template <>
+struct Sinus<0>
+{
+    static double valeur(double)
+    {
+        return 0;
+    }
+};
 
 #endif
+
+
+

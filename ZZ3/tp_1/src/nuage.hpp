@@ -5,8 +5,7 @@
 #include <vector>
 #include <sstream>
 #include <math.h>
-
-Cartesien barycentre(Nuage);
+#include "cartesien.hpp"
 
 class Point;
 
@@ -34,5 +33,8 @@ class Nuage
 
     void afficher(std::ostream&) const;
 };
+
+Cartesien barycentre(Nuage);
+Cartesien barycentre(Nuage);
 
 #endif

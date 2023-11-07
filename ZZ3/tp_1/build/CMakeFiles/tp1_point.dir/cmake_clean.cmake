@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp1_point.dir/src/cartesien.cpp.o.d"
   "CMakeFiles/tp1_point.dir/src/main_point.cpp.o"
   "CMakeFiles/tp1_point.dir/src/main_point.cpp.o.d"
+  "CMakeFiles/tp1_point.dir/src/nuage.cpp.o"
+  "CMakeFiles/tp1_point.dir/src/nuage.cpp.o.d"
   "CMakeFiles/tp1_point.dir/src/point.cpp.o"
   "CMakeFiles/tp1_point.dir/src/point.cpp.o.d"
   "CMakeFiles/tp1_point.dir/src/polaire.cpp.o"

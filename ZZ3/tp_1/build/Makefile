@@ -233,6 +233,36 @@ src/main_vecteur.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_vecteur.dir/build.make CMakeFiles/tp1_vecteur.dir/src/main_vecteur.cpp.s
 .PHONY : src/main_vecteur.cpp.s
 
+src/nuage.o: src/nuage.cpp.o
+.PHONY : src/nuage.o
+
+# target to build an object file
+src/nuage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_point.dir/build.make CMakeFiles/tp1_point.dir/src/nuage.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_vecteur.dir/build.make CMakeFiles/tp1_vecteur.dir/src/nuage.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_test.dir/build.make CMakeFiles/tp1_test.dir/src/nuage.cpp.o
+.PHONY : src/nuage.cpp.o
+
+src/nuage.i: src/nuage.cpp.i
+.PHONY : src/nuage.i
+
+# target to preprocess a source file
+src/nuage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_point.dir/build.make CMakeFiles/tp1_point.dir/src/nuage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_vecteur.dir/build.make CMakeFiles/tp1_vecteur.dir/src/nuage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_test.dir/build.make CMakeFiles/tp1_test.dir/src/nuage.cpp.i
+.PHONY : src/nuage.cpp.i
+
+src/nuage.s: src/nuage.cpp.s
+.PHONY : src/nuage.s
+
+# target to generate assembly for a file
+src/nuage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_point.dir/build.make CMakeFiles/tp1_point.dir/src/nuage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_vecteur.dir/build.make CMakeFiles/tp1_vecteur.dir/src/nuage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tp1_test.dir/build.make CMakeFiles/tp1_test.dir/src/nuage.cpp.s
+.PHONY : src/nuage.cpp.s
+
 src/point.o: src/point.cpp.o
 .PHONY : src/point.o
 
@@ -361,6 +391,9 @@ help:
 	@echo "... src/main_vecteur.o"
 	@echo "... src/main_vecteur.i"
 	@echo "... src/main_vecteur.s"
+	@echo "... src/nuage.o"
+	@echo "... src/nuage.i"
+	@echo "... src/nuage.s"
 	@echo "... src/point.o"
 	@echo "... src/point.i"
 	@echo "... src/point.s"

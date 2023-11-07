@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tp1_test.dir/src/cartesien.cpp.o"
   "CMakeFiles/tp1_test.dir/src/cartesien.cpp.o.d"
+  "CMakeFiles/tp1_test.dir/src/nuage.cpp.o"
+  "CMakeFiles/tp1_test.dir/src/nuage.cpp.o.d"
   "CMakeFiles/tp1_test.dir/src/point.cpp.o"
   "CMakeFiles/tp1_test.dir/src/point.cpp.o.d"
   "CMakeFiles/tp1_test.dir/src/polaire.cpp.o"

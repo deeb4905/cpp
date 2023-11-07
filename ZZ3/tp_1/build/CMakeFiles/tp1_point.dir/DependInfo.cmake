@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_1/src/cartesien.cpp" "CMakeFiles/tp1_point.dir/src/cartesien.cpp.o" "gcc" "CMakeFiles/tp1_point.dir/src/cartesien.cpp.o.d"
   "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_1/src/main_point.cpp" "CMakeFiles/tp1_point.dir/src/main_point.cpp.o" "gcc" "CMakeFiles/tp1_point.dir/src/main_point.cpp.o.d"
+  "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_1/src/nuage.cpp" "CMakeFiles/tp1_point.dir/src/nuage.cpp.o" "gcc" "CMakeFiles/tp1_point.dir/src/nuage.cpp.o.d"
   "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_1/src/point.cpp" "CMakeFiles/tp1_point.dir/src/point.cpp.o" "gcc" "CMakeFiles/tp1_point.dir/src/point.cpp.o.d"
   "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_1/src/polaire.cpp" "CMakeFiles/tp1_point.dir/src/polaire.cpp.o" "gcc" "CMakeFiles/tp1_point.dir/src/polaire.cpp.o.d"
   )
