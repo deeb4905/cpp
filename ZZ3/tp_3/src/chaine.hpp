@@ -149,9 +149,9 @@ struct Sinus
 template <>
 struct Sinus<0>
 {
-    static double valeur(double)
+    static double valeur(double d)
     {
-        return 0;
+        return d;
     }
 };
 

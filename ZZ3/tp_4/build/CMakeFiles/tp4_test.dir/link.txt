@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -Wextra -pedantic  CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o CMakeFiles/test.dir/test/catch.cpp.o -o tp4_test 
