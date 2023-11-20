@@ -89,9 +89,15 @@ tp4_test_OBJECTS = \
 
 # External object files for target tp4_test
 tp4_test_EXTERNAL_OBJECTS = \
+"/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/build/CMakeFiles/common.dir/src/carte.cpp.o" \
+"/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/build/CMakeFiles/common.dir/src/paquet.cpp.o" \
+"/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/build/CMakeFiles/common.dir/src/usine.cpp.o" \
 "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/build/CMakeFiles/test.dir/test/catch.cpp.o"
 
 tp4_test: CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o
+tp4_test: CMakeFiles/common.dir/src/carte.cpp.o
+tp4_test: CMakeFiles/common.dir/src/paquet.cpp.o
+tp4_test: CMakeFiles/common.dir/src/usine.cpp.o
 tp4_test: CMakeFiles/test.dir/test/catch.cpp.o
 tp4_test: CMakeFiles/tp4_test.dir/build.make
 tp4_test: CMakeFiles/tp4_test.dir/link.txt
