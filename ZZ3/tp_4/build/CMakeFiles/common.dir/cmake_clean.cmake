@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/common.dir/src/carte.cpp.o.d"
   "CMakeFiles/common.dir/src/paquet.cpp.o"
   "CMakeFiles/common.dir/src/paquet.cpp.o.d"
+  "CMakeFiles/common.dir/src/ressource.cpp.o"
+  "CMakeFiles/common.dir/src/ressource.cpp.o.d"
   "CMakeFiles/common.dir/src/usine.cpp.o"
   "CMakeFiles/common.dir/src/usine.cpp.o.d"
 )

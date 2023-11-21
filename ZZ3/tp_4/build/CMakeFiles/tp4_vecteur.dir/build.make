@@ -91,11 +91,13 @@ tp4_vecteur_OBJECTS = \
 tp4_vecteur_EXTERNAL_OBJECTS = \
 "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/build/CMakeFiles/common.dir/src/carte.cpp.o" \
 "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/build/CMakeFiles/common.dir/src/paquet.cpp.o" \
+"/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/build/CMakeFiles/common.dir/src/ressource.cpp.o" \
 "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/build/CMakeFiles/common.dir/src/usine.cpp.o"
 
 tp4_vecteur: CMakeFiles/tp4_vecteur.dir/test/test_vecteur.cpp.o
 tp4_vecteur: CMakeFiles/common.dir/src/carte.cpp.o
 tp4_vecteur: CMakeFiles/common.dir/src/paquet.cpp.o
+tp4_vecteur: CMakeFiles/common.dir/src/ressource.cpp.o
 tp4_vecteur: CMakeFiles/common.dir/src/usine.cpp.o
 tp4_vecteur: CMakeFiles/tp4_vecteur.dir/build.make
 tp4_vecteur: CMakeFiles/tp4_vecteur.dir/link.txt

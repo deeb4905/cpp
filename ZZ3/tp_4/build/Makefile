@@ -229,6 +229,30 @@ src/paquet.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/paquet.cpp.s
 .PHONY : src/paquet.cpp.s
 
+src/ressource.o: src/ressource.cpp.o
+.PHONY : src/ressource.o
+
+# target to build an object file
+src/ressource.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/ressource.cpp.o
+.PHONY : src/ressource.cpp.o
+
+src/ressource.i: src/ressource.cpp.i
+.PHONY : src/ressource.i
+
+# target to preprocess a source file
+src/ressource.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/ressource.cpp.i
+.PHONY : src/ressource.cpp.i
+
+src/ressource.s: src/ressource.cpp.s
+.PHONY : src/ressource.s
+
+# target to generate assembly for a file
+src/ressource.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/ressource.cpp.s
+.PHONY : src/ressource.cpp.s
+
 src/usine.o: src/usine.cpp.o
 .PHONY : src/usine.o
 
@@ -368,6 +392,9 @@ help:
 	@echo "... src/paquet.o"
 	@echo "... src/paquet.i"
 	@echo "... src/paquet.s"
+	@echo "... src/ressource.o"
+	@echo "... src/ressource.i"
+	@echo "... src/ressource.s"
 	@echo "... src/usine.o"
 	@echo "... src/usine.i"
 	@echo "... src/usine.s"

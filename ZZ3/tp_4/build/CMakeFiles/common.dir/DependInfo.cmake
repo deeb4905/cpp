@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/carte.cpp" "CMakeFiles/common.dir/src/carte.cpp.o" "gcc" "CMakeFiles/common.dir/src/carte.cpp.o.d"
   "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/paquet.cpp" "CMakeFiles/common.dir/src/paquet.cpp.o" "gcc" "CMakeFiles/common.dir/src/paquet.cpp.o.d"
+  "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/ressource.cpp" "CMakeFiles/common.dir/src/ressource.cpp.o" "gcc" "CMakeFiles/common.dir/src/ressource.cpp.o.d"
   "/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/usine.cpp" "CMakeFiles/common.dir/src/usine.cpp.o" "gcc" "CMakeFiles/common.dir/src/usine.cpp.o.d"
   )
 

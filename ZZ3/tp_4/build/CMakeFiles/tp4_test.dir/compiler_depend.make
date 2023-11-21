@@ -3,7 +3,9 @@
 
 CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/test/tp4_test.cpp \
   /home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/carte.hpp \
+  /home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/consommateur.hpp \
   /home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/paquet.hpp \
+  /home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/ressource.hpp \
   /home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/usine.hpp \
   /home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/test/catch.hpp \
   /usr/include/alloca.h \
@@ -294,7 +296,9 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
-/usr/include/c++/11/iterator:
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
 /usr/include/c++/11/iosfwd:
 
@@ -386,10 +390,6 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 
 /usr/include/c++/11/bits/stl_function.h:
 
-/usr/include/c++/11/chrono:
-
-/usr/include/c++/11/bits/stl_construct.h:
-
 /usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
@@ -438,11 +438,13 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 
 /usr/include/c++/11/bits/stringfwd.h:
 
-/usr/include/c++/11/bits/uniform_int_dist.h:
-
 /usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/c++/11/bit:
+
+/usr/include/c++/11/bits/ptr_traits.h:
+
+/usr/include/c++/11/sstream:
 
 /usr/include/c++/11/tr1/bessel_function.tcc:
 
@@ -452,9 +454,33 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 
 /usr/include/c++/11/bits/erase_if.h:
 
-/usr/include/c++/11/sstream:
+/usr/include/c++/11/cassert:
 
-/usr/include/c++/11/bits/ptr_traits.h:
+/usr/include/c++/11/backward/auto_ptr.h:
+
+/usr/include/c++/11/bits/streambuf_iterator.h:
+
+/usr/include/c++/11/bits/stream_iterator.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/c++/11/bits/exception_defines.h:
+
+/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/test/tp4_test.cpp:
+
+/usr/include/c++/11/bits/nested_exception.h:
+
+/usr/include/c++/11/bits/ostream_insert.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/c++/11/bits/exception_ptr.h:
+
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/11/chrono:
+
+/usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/c++/11/tr1/poly_hermite.tcc:
 
@@ -482,47 +508,19 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 
 /usr/include/c++/11/limits:
 
-/usr/include/c++/11/cassert:
+/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/consommateur.hpp:
 
-/usr/include/c++/11/backward/auto_ptr.h:
+/usr/include/c++/11/bits/predefined_ops.h:
 
-/usr/include/c++/11/bits/streambuf_iterator.h:
+/usr/include/c++/11/bits/sstream.tcc:
 
-/usr/include/c++/11/bits/stream_iterator.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/c++/11/bits/exception_defines.h:
-
-/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/test/tp4_test.cpp:
-
-/usr/include/c++/11/bits/nested_exception.h:
-
-/usr/include/c++/11/bits/ostream_insert.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/c++/11/bits/exception_ptr.h:
-
-/usr/include/c++/11/tr1/modified_bessel_func.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
-
-/usr/include/c++/11/bits/stl_tempbuf.h:
-
-/usr/include/c++/11/bits/parse_numbers.h:
-
-/usr/include/c++/11/pstl/glue_numeric_defs.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/11/ext/type_traits.h:
 
 /usr/include/c++/11/bits/allocated_ptr.h:
 
-/usr/include/c++/11/istream:
-
 /usr/include/c++/11/bits/enable_special_members.h:
-
-/usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/11/bits/algorithmfwd.h:
 
@@ -536,6 +534,14 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/11/bits/stl_tempbuf.h:
+
+/usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/c++/11/pstl/glue_numeric_defs.h:
+
 /usr/include/c++/11/cstddef:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
@@ -545,6 +551,8 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
 /usr/include/c++/11/system_error:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/cerrno:
 
@@ -597,6 +605,10 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/c++/11/bits/postypes.h:
+
+/usr/include/c++/11/istream:
+
+/usr/include/c++/11/iterator:
 
 /usr/include/c++/11/new:
 
@@ -655,6 +667,8 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 /usr/include/c++/11/bits/node_handle.h:
 
 /usr/include/c++/11/utility:
+
+/home/lyloo/Documents/ZZ3/cpp/ZZ3/tp_4/src/ressource.hpp:
 
 /usr/include/wchar.h:
 
@@ -752,12 +766,6 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/usr/include/c++/11/bits/predefined_ops.h:
-
-/usr/include/c++/11/bits/sstream.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
@@ -813,5 +821,3 @@ CMakeFiles/tp4_test.dir/test/tp4_test.cpp.o: /home/lyloo/Documents/ZZ3/cpp/ZZ3/t
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
