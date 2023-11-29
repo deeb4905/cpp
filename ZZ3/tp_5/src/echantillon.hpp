@@ -29,7 +29,8 @@ class Echantillon {
     }
 
 
-    void ajouter(double val) {
+    void ajouter(double d) {
+        Valeur val(d);
         v.emplace_back(val);
     }
 

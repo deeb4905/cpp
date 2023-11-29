@@ -52,8 +52,12 @@ class Classe {
     }
 
 
-    bool operator<(const Classe& c2) {
-        return quantite < c2.getQuantite();
+    bool operator<(const Classe& c2) const {
+        return borneInf < c2.getBorneInf();
+    }
+
+    bool operator>(const Classe& c2) const {
+        return borneInf > c2.getBorneInf();
     }
 
 };
