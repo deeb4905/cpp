@@ -8,7 +8,7 @@
 std::string chaine(std::string);
 std::string chaine(int);
 std::string chaine(double);
-template <typename... Args> std::string chaine(Args&...);
+//template <typename... Args> std::string chaine(Args&...);
 template <typename... Args> std::string chaine(std::tuple<Args...>);
 
 
